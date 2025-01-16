@@ -10,12 +10,14 @@ legend top right
     <b>Legend</b>
     <#FFFFFF,#FFFFFF>|  <#24C2Ce> BC | Business Capability|
     | <#24C2Ce> BA  | Business Application|
+    | <#24C2Ce> IO  | Information Object|
     | <#009156> BS  | Business Service|
     | <#009156> BSO | Business Service Offering|
     | <#FCA822> TS | Technical Service |
     | <#FCA822> TSO | Technical Service Offering|
     | <#FCA822> AS | Application Service |
     | <#FCA822> CI | Configuration Item |
+    | <#FD7786> SC | Software Delivery Lifecyle Component |
     |  | <b>Not all components shown for brevity</b>|
 endlegend
 
@@ -44,7 +46,7 @@ skinparam Title {
     #24C2Ce;line:black;line.bold;text:Black [
         BC
         ----
-        $name 
+        $name
     ]
 !endprocedure
 
@@ -124,6 +126,42 @@ skinparam Title {
 !unquoted procedure $CI($name)
     #FCA822;line:black;text:black [
         CI
+        ----
+        $name
+    ]
+!endprocedure
+
+' Define SDLC
+!unquoted procedure $SDLC($name)
+    #FD7786;line:black;text:black [
+        SC
+        ----
+        $name
+    ]
+!endprocedure
+
+' Define CI Resource Group
+!unquoted procedure $CIResourceGroup($name)
+    #FCA822;line:black;text:black [
+        CI Resource Group
+        ----
+        $name
+    ]
+!endprocedure
+
+' Define Application
+!unquoted procedure $Application($name)
+    #FCA822;line:black;text:black [
+        Application
+        ----
+        $name
+    ]
+!endprocedure
+
+' Define Information Object
+!unquoted procedure $InformationObject($name)
+    #24C2Ce;line:black;text:Black [
+        IO
         ----
         $name
     ]
